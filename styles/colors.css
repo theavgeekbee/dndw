@@ -1,0 +1,18 @@
+.red {
+  color: #c0392b;
+}
+.blue {
+  color: #2980b9;
+}
+.yellow {
+  color: #FFD700;
+}
+
+.quote {
+  font-style: italic;
+  border-left: 4px solid #FFD700;
+  margin-left: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  border-radius: 10px;
+}
