@@ -7,6 +7,12 @@
     <link href="styles/main.css" rel="stylesheet">
 
     <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-static/favicon-16x16.png">
+    <link rel="manifest" href="favicon-static/site.webmanifest">
+
   </head>
   <body>
     <main>
@@ -17,23 +23,23 @@
       <p>I prefer donations via <b>cryptocurrencies</b>.</p>
       <hr />
       <h2>BTC</h2>
-      <p id="btc">bc1q803vtq6l3fjm0x668wkrpnfhrpm8vwu3yt3uj5</p>
+      <p id="btc" class="crypto">bc1q803vtq6l3fjm0x668wkrpnfhrpm8vwu3yt3uj5</p>
       <button hx-on:click="copyToClipboard('#btc')">Copy Text</button>
       <hr />
       <h2>LTC</h2>
-      <p id="ltc">LYp8wvdfLnTvBTXzwCkaWUdFkMd6vtW237</p>
+      <p id="ltc" class="crypto">LYp8wvdfLnTvBTXzwCkaWUdFkMd6vtW237</p>
       <button hx-on:click="copyToClipboard('#ltc')">Copy Text</button>
       <hr />
       <h2>SOL</h2>
-      <p id="sol">J8FShX8ZLVFRtawThVCXcFAfGotMFG3TyWofzDWyT7iD</p>
+      <p id="sol" class="crypto">J8FShX8ZLVFRtawThVCXcFAfGotMFG3TyWofzDWyT7iD</p>
       <button hx-on:click="copyToClipboard('#sol')">Copy Text</button>
       <hr />
       <h2>ETH</h2>
-      <p id="eth">0x26E7C5a53306Fa8328864BA7317be59b1474995d</p>
+      <p id="eth" class="crypto">0x26E7C5a53306Fa8328864BA7317be59b1474995d</p>
       <button hx-on:click="copyToClipboard('#eth')">Copy Text</button>
       <hr />
       <h2>XMR</h2>
-      <p id="xmr">41hXUNWz8gTiM4ddxqPj6DBRoGNHCPeCaJVAXXQDMcYDStYULyEUqJPNsqQkurEoadbcZ8X1S1pUFA6RbALYT9Fj6vm7QqU</p>
+      <p id="xmr" class="crypto">41hXUNWz8gTiM4ddxqPj6DBRoGNHCPeCaJVAXXQDMcYDStYULyEUqJPNsqQkurEoadbcZ8X1S1pUFA6RbALYT9Fj6vm7QqU</p>
       <button hx-on:click="copyToClipboard('#xmr')">Copy Text</button>
       <hr />
       <h2>Emotional Support</h2>
@@ -47,12 +53,12 @@
 
     <script>
     function copyToClipboard(selector) {
-      var text = document.querySelector(selector).innerHTML;
-      navigator.clipboard.writeText(text).then(function() {
-        alert('Text copied to clipboard!');
-      }).catch(function(err) {
-        console.error('Error copying text: ', err);
-      });
+    var text = document.querySelector(selector).innerHTML;
+    navigator.clipboard.writeText(text).then(function() {
+    alert('Text copied to clipboard!');
+    }).catch(function(err) {
+    console.error('Error copying text: ', err);
+    });
     }
     </script>
   </body>
