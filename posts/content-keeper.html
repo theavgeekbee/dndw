@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dndw // contentkeeper</title>
+    <link href="../styles/main.css" rel="stylesheet">
+    <link href="../styles/colors.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon-static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-static/favicon-16x16.png">
+    <link rel="manifest" href="../favicon-static/site.webmanifest">
+  </head>
+  <body>
+    <main>
+        <a class="back" href="../index.html">&larr; go back</a>
+        <hr />
+
+        <h1>dndw: contentkeeper</h1>
+        <p>yes, the quote is real.</p>
+        <h2>what is contentkeeper?</h2>
+      <p><span class="red">ContentKeeper</span> and its Chrome OS plugin, <span class="red">CK-Express</span>, are SaaS (<s>Spyware</s> Software as a Service) products made by
+        <span class="yellow">Impero</span>&nbsp;<span class="blue">Software</span>.</p>
+      <p>Impero Software claims that Content Keeper is:</p>
+      <p>"The industry’s most <span class="blue">secure and adaptable</span> web filter,
+        uniquely designed to not only <span class="blue">protect students</span>, but to enhance their use of <span class="blue">diverse technologies</span> in the classroom,
+        supporting a <span class="red">seamless learning experience</span>."
+          <a href="https://www.ativion.com/contentkeeper/" target="_blank">[1] &#8599;</a></p>
+      <h2>what's wrong with contentkeeper?</h2>
+      <p><span class="red">Hot take:</span> I actually like the concept of ContentKeeper.</p> 
+      <p>At the risk of sounding like a teacher's pet, there are too many <span class="red">absolute bums</span> in almost all of my classes to justify relinquishing web filters.</p>
+      <p>However, like most things I write about on <span class="blue">dndw</span>, this is <span class="blue">good in theory</span>, absolutely <span class="red">ATROCIOUS execution</span>.</p>
+      <h2>chapter 1: disillusionment</h2>
+      <p><blockquote class="quote">"The Party told you to <span class="red">reject the evidence</span> of your <span class="blue">eyes and ears</span>. It was their <span class="yellow"">final, most essential command</span>."
+        <footer>- George Orwell, 1984</footer></blockquote></p>
+      <p>Content Keeper uses <span class="red">DPI</span>, or&nbsp;<span class="red">Deep Packet Inspection</span>, along with&nbsp;<span class="blue">SSL inspection</span>&nbsp;to monitor network traffic.
+        Coincidentally, it's also what the <a href="https://protonvpn.com/blog/great-firewall-china" target="_blank">Great Firewall of China &#8599;</a> uses.</p>
+      <p>With that last sentence, you can <span class="blue">immediately</span> tell that Impero Software is trying <span class="red">WAYYY to hard</span> on this product. I mean, these
+        are literal children trying to play <span class="blue">Slope 4</span> after class we're talking about.</p>
+      <p>Okay, maybe they just want to keep up the facade of ultra-impenetrability to sell more. I mean, investors want to see <span class="blue">state of the sart security</span> or <span class="red">none at all</span>.</p>
+      <p>Either way, this is a <span class="red">MASSIVE privacy violation</span>
+        (which, by the way, is a <a href="https://sherloc.unodc.org/cld/zh/education/tertiary/cybercrime/module-10/key-issues/privacy-what-it-is-and-why-it-is-important.html" target="_blank">human right &#8599;</a>).
+      <h2>chapter 2: if you have nothing to hide, why do you need privacy?</h2>
+      <p>I could answer this question with a long-winded chapter about <span class="red">historically authoritarian regimes</span> and <span class="blue">the presumption of innocence and burden of proof</span>.</p>
+      <p>Instead, I'm going to give you the opportunity to read about it yourself as I go into the tech reasoning behind why I think it's bad.</p>
+      <h2>chapter 3: my concerns</h2>
+      <p>I'm going to be real with you, I am <span class="red">nowhere near</span> being a political analyst. I'm just a high school student,
+        so chances are, a lot of chapter 3 might be wrong. But if there's <span class="blue">one thing</span> I understand, it is cybersecurity. And there is no arguing with this:</p>
+      <p>When you look at software through the lens of <span class="red">malicious</span> until proven <span class="blue">otherwise</span> (which you SHOULD be doing), closed source software seems to be inherently unsafe.
+        There's no way for you to audit the code, ensure it's integrity, or patch vulnerabilities. It's esssentially a big game of <span class="blue">trust me, bro</span>.</p>
+      <p>It's also very <span class="red">naive</span> to assert that you have <span class="blue">zero-day vulnerability</span> protection and leave it at that.
+        You ALWAYS look at security through a lens of, "if things go bad, what can I do"? In this case, if an <span class="red">actual zero-day</span> that affects their tool directly
+        occurs, we have no way of knowing or mitigating that.</p>
+      <hr>
+      <footer>
+        <b>tldr; DPI bad because of privacy concerns and cybersecurity vulnerabilities</b><br />
+        (c) 2025 Nathan Lee
+      </footer>
+    </main>
+  </body>
+</html>
