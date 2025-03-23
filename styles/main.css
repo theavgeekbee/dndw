@@ -10,11 +10,16 @@ main {
   border-radius: 30px;
   padding: 10px;
 
-  margin-left: 35vw;
-  margin-top: 30px;
+  margin: 10px auto;
+  text-wrap: wrap;
+}
+@media (max-width: 600px) {
+  main {
+    width: 70vw;  /* Adjust the width for mobile */
+  }
 }
 
-p#xmr {
+p {
   word-break: break-all;
 }
 
