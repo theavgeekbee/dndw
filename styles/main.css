@@ -20,6 +20,9 @@ main {
 }
 
 p {
+  word-break: word-break; 
+}
+p.crypto {
   word-break: break-all;
 }
 
