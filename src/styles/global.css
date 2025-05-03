@@ -1,0 +1,121 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+:root {
+	--accent: #2337ff;
+	--accent-dark: #000d8a;
+	--black: 15, 18, 25;
+	--gray: 96, 115, 159;
+	--gray-light: 229, 233, 240;
+	--gray-dark: 34, 41, 57;
+	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--box-shadow:
+		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+		0 16px 32px rgba(var(--gray), 33%);
+}
+
+body {
+	background: linear-gradient(45deg, #e66465, #9198e5) fixed;
+	color: #f0f0f0;
+	font-family: 'Courier New', monospace;
+}
+main {
+	width: 35vw;
+	border: 3px solid #dddddd;
+	border-radius: 30px;
+	padding: 10px;
+
+	margin: 10px auto;
+	text-wrap: wrap;
+}
+@media (max-width: 600px) {
+	main {
+		width: 70vw;  /* Adjust the width for mobile */
+	}
+}
+
+p {
+	word-break: normal;
+}
+p.crypto {
+	word-break: break-all;
+}
+
+.logo {
+	text-align: center;
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.author {
+	color: #dadada;
+}
+
+hr {
+	color: white;
+}
+
+section {
+	color: #d0d0d0;
+	margin-left: 10%;
+}
+
+a {
+	color: white;
+	transition: color 0.5s ease-in-out;
+}
+a:visited {
+	color: white;
+}
+a:hover {
+	color: #397cbf;
+}
+
+.noshow {
+	display: none;
+}
+
+button {
+	background: none;
+	border: 2px dashed white;
+	padding: 5px;
+	border-radius: 10px;
+	color: white;
+	transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
+}
+button:hover {
+	border: 2px solid #397cbf;
+	color: #397cbf;
+}
+
+r {
+	color: #b22222;
+}
+bl {
+	color: #3a539b;
+}
+y {
+	color: #FFD700;
+}
+
+blockquote {
+	font-style: italic;
+	border-left: 4px solid #FFD700;
+	margin-left: 4px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	padding: 8px;
+	border-radius: 10px;
+}
+
+code {
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	padding: 0.1rem;
+	backdrop-filter: blur(10px);
+}
+li {
+	margin: 3px 0;
+}
