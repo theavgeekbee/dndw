@@ -1,6 +1,5 @@
 body {
-  background: linear-gradient(45deg, #e66465, #9198e5);
-  background-attachment: fixed;
+  background: linear-gradient(45deg, #e66465, #9198e5) fixed;
   color: #f0f0f0;
   font-family: 'Courier New', monospace;
 }
