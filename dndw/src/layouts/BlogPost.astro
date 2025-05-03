@@ -6,16 +6,18 @@ import Footer from '../components/Footer.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
+import {slide} from 'astro:transitions';
+
 const { title, description,} = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" transition:name="root" transition:animate="none">
 	<head>
 		<BaseHead title={title} description={description} />
 	</head>
 
 	<body>
-		<main>
+		<main transition:animate={slide({duration: "0.5s"})}>
 			<Header />
 			<hr />
 			<slot />
