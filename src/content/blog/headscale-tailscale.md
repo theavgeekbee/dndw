@@ -27,14 +27,23 @@ You're going to want <r>two things</r> for this:
 1. Allocate a new VPS and assign a <r>static IP</r>. Link this IP to your desired subdomain using an <r>A</r> record (if you're using Cloudflare, deselect <bl>proxy</bl>).
 2. [Install Headscale &#8599;](https://headscale.net/stable/)
 3. Make the following changes to the config file:
-    - Set `server_url: https://your.subdomain:443`
+    - Set `server_url: https://your.domain.io:443`
     - Set `listen_addr: 0.0.0.0:443`
-    - In derp, enable server and set ipv4 to your assigned static IP
+    - In derp, enable <r>server</r> and set <r>ipv4</r> to your <bl>assigned static IP</bl>
     - Set the acme_email and `tls_letseencrypt_hostname: your.domain.io`
-4. Lastly, restart Headscale using `sudo systemctl restart headscale`
+4. Restart Headscale using `sudo systemctl restart headscale`
+5. Install <bl>Tailscale</bl> on the server
+6. Register the server as an exit node using `sudo tailscale up --login-server https://your.domain.io --advertise-exit-node`
+7. <bl>Log the server in</bl> using a <r>separate shell</r>
+8. Run `sudo tailscale set --advertise-exit-node` and then `sudo tailscale down`
+9. List the routes using `headscale routes list`
+10. For <r>every named node</r>, run `headscale routes enable -r <id>` for its ID.
+11. Start Tailscale using the <bl>previous tailscale command</bl>
 
-You now have a <bl>server</bl> serving <r>Headscale</r> to your custom <y>domain</y>. Now, you can follow the
-<bl>instructions</bl> on the Headscale docs to <r>connect your device</r>.
+## how do I connect?
+On your <r>own computer</r>, run `sudo tailscale up --login-server https://your.domain.io --exit-node <node-name>`.
+Log the client in.
+The <r>node name</r> is the one that's named in the previous <bl>step 9</bl>.
 
 ## privacy ~ freedom
 To add a footnote, I'd like to assert that <r>privacy</r> and <bl>freedom</bl> go hand in hand.
