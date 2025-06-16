@@ -28,9 +28,7 @@ const themes = ['candy', 'glass'];
         localStorage?.setItem('theme', theme);
 
         // set the selector value to the current theme
-        if (selector) {
-            selector.value = theme;
-        }
+        selector.value = theme
     }
 
     selector.addEventListener('change', (e) => {
