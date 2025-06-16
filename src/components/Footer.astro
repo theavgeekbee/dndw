@@ -1,7 +1,10 @@
 ---
+import ThemeSelector from "./ThemeSelector.astro";
 const today = new Date();
 ---
 
 <footer>
 	&copy; {today.getFullYear()} Nathan Lee. All rights reserved.
+	<br />
+	<ThemeSelector />
 </footer>

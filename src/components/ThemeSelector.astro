@@ -1,0 +1,46 @@
+---
+// You can pass a default theme if desired
+const themes = ['candy', 'glass'];
+---
+
+<label for="theme-selector">Theme:</label><select id="theme-selector" class="theme-selector">
+    {themes.map(theme => (
+            <option value={theme}>{theme}</option>
+    ))}
+</select>
+
+<script is:inline>
+    const selector = document.getElementById('theme-selector');
+    const lsTheme = () => {
+        const localStorageTheme = localStorage?.getItem("theme") ?? '';
+        if (['candy', 'glass'].includes(localStorageTheme)) {
+            return localStorageTheme;
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'glass';
+        }
+        return 'candy';
+    };
+
+    const applyTheme = (theme) => {
+        console.log("applying theme")
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage?.setItem('theme', theme);
+
+        // set the selector value to the current theme
+        if (selector) {
+            selector.value = theme;
+        }
+    }
+
+    selector.addEventListener('change', (e) => {
+        const theme = e.target.value;
+        applyTheme(theme)
+    });
+    document.addEventListener('astro:after-swap', () => {
+        console.log("after swapping pages")
+        applyTheme(lsTheme())
+    });
+
+    applyTheme(lsTheme());
+</script>
