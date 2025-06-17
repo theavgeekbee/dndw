@@ -1,6 +1,6 @@
 ---
 title: 'dndw: order flow and stop hunts'
-description: '"For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men, who by their unrighteousness suppress the truth." - Romans 1:18'
+description: '"For where your treasure is, there your heart will be also." - Matthew 6:21'
 ord: 1
 ---
 # dndw: order flow and stop hunts
