@@ -1,0 +1,105 @@
+---
+title: 'dndw: cats and mice 1'
+description: '"Do your best to present yourself to God as one approved, a worker who does not need to be ashamed and who correctly handles the word of truth." - 2 Timothy 2:15'
+ord: 2
+---
+# dndw: cats and mice 1
+
+A "<r>cat</r> and <bl>mouse</bl> game" is, "a contrived action involving constant pursuit, near captures, and
+repeated escapes." It can be used to describe many <r>adversarial systems</r>, such as:
+- <r>Academic Dishonesty</r> vs <bl>Academic Institutions</bl>
+- <r>Video Game Hackers</r> vs <bl>Anticheats</bl>
+- <r>Malware</r> vs <bl>Antivirus</bl>
+- Any other similar adversaries
+
+The "<r>attacker</r>" must continuously <r>select novel winning strategies</r> and the
+"<bl>defender</bl>" must continuously <bl>update their patches</bl> to cover the attackers.
+
+## objective
+
+We're going to <bl>mathematically prove</bl> that, ignoring external factors, that it is <r>never going to be
+possible</r> for the defender to "<bl>win</bl>" (permanently block the attacker).
+
+## the proof
+We'll begin by defining the system using a set of logical axioms:
+1. The <r>attacker's</r> goal is to defeat the <bl>defender</bl> by <y>any means necessary</y>
+2. In one game, the <r>attacker</r> wins if their strategy is <bl>not blocked by the defender</bl>.
+3. The <r>attacker</r> will <y>develop new methods</y> to win
+4. The <bl>defender's</bl> goal is to <r>stop the attacker</r> by <y>any means necessary</y>
+5. The <bl>defender</bl> wins a game by <r>blocking the attacker</r>.
+6. The <bl>defender</bl> has a nonzero chance of selecting the <r>attacker's</r> strategy <y>at random</y>
+without being prompted by any previous game.
+7. Each game, <y>both sides</y> <r>cannot modify</r> their strategy during the game.
+8. Both <bl>the defender</bl> and <r>the attacker</r> are <y>perfectly logical and innovative</y>.
+9. During the game, the <bl>defender</bl> is <r>not able</r> to apply an <y>infinite number of defenses</y>
+(the number of defenses they have active during the game must be bounded)
+10. During the game, <r>the attacker</r> can only use <r>one</r> strategy.
+11. Each game <y>must</y> end in exactly one of the parties winning.
+12. The set of winning <r>attacker strategies</r> and the set of <bl>possible defenses</bl> are:
+    - Countably Infinite
+    - Equal in cardinality
+    - Bijective (each possible defense prevents a corresponding strategy from winning).
+13. There are an <r>infinite</r> number of games
+
+### definitions
+Let $S = \{s_1, s_2, s_3, \dots\}$ represent the set of <r>possible attacker</r> strategies.
+
+Let $D = \{d_1, d_2, d_3, \dots\}$ represent the set of <bl>possible defender</bl> strategies.
+
+Let there be a bijection <y>$f: S \rightarrow D$</y> that satisfies axiom 12 such that <y>$f(s_i) = d_i$</y>
+represents that <bl>$d_i$</bl> blocks strategy <r>$s_i$</r>.
+
+In game $n \in \mathbb{N}$, the attacker selects <r>$s_n \in S$</r> and the defender selects <bl>$D_n \subset D$</bl>.
+The attacker wins if <r>$f(s_n) \notin D_n$</r> and the defender wins if <bl>$f(s_n) \in D_n$</bl>.
+### lemma 1
+> For game $n$, there exists <y>infinitely many attacker strategies</y> not covered in <bl>$D_n$</bl>.
+
+<bl>$|D_n| \le k$</bl>, where $k$ is finite, meaning there are <y>infinitely many defenses</y> <bl>$d$</bl> where <bl>$d \notin D_n$.</bl>
+Considering the bijection that $f(s_i) = d_i$, there <r>must exist infinitely</r> many elements
+<y>$s_i$</y> such that <r>$f(s_i) \notin D_n$</r>.
+
+### lemma 2
+> The <r>attacker</r> can win <y>infinitely many games</y>.
+
+By <y>lemma 1</y>, there exists an <y>infinite number of strategies</y> not covered, meaning that
+if the <r>attacker</r> selects a strategy <r>at random</r>,
+there is a <bl>nonzero probability</bl> of the attacker selecting a strategy <bl>not in $D_n$</bl>.
+Since this occurs <y>over an infinite sample space</y>, the attacker selecting a strategy
+<r>$s$ such that $f(s) \notin D_n$</r> must occur <y>infinite times</y>.
+
+The attacker, knowing that if he <bl>selects randomly</bl> he has a <bl>nonzero probability of winning</bl>,
+will elect to do so by axiom 8.
+
+### lemma 3
+> The <bl>defender</bl> can win <y>infinitely many games</y>.
+
+Let the defender construct the <bl>sequence $(D_n)$</bl> such that $\cup^\infty_{n=1}\:D_n \subseteq D$ and <bl>every
+defense $d_i \in D$</bl> appears <y>infinitely many times</y> in the sequence. Considering the bijection $f$,
+every <r>attack strategy $s$</r> has a <bl>blocker $f(s)$</bl> that appears< <y>infinitely</y> often.
+Therefore, any strategy <r>$s \in S$</r> is covered <y>infinitely many times</y>.
+
+### lemma 4
+> The <r>attacker</r> cannot go on an <y>infinite</y> winning streak.
+
+- <r>Assume</r> that the <r>attacker</r> will win every game $n \in \mathbb{N}$ for <bl>$n \ge N$</bl>
+- This means <r>$f(s_n) \notin D_n$</r> for every $n \ge N$
+- <y>Lemma 3</y> contradicts this, as the <bl>defender</bl> can win infinitely many games.
+- The premise is <r>incorrect</r>, proving lemma 4 <bl>by contradiction</bl>.
+
+### lemma 5
+> The <bl>defender</bl> cannot go on an <y>infinite</y> winning streak.
+
+Trivial from lemma 2: the <r>attacker</r> can win infinitely many games, therefore,
+the set of <r>attacker wins</r> is <bl>unbounded</bl>.
+
+### proof
+Therefore, by <y>lemmas 2 and 3</y>, the set of <r>attacker wins</r> and the set of <bl>defender wins</bl> are both <y>unbounded</y>.
+By <y>lemmas 4 and 5</y>, the <r>cardinality</r> of these sets are both equal to <bl>$\aleph_0$</bl>.
+
+## defender ~ illogical
+
+We've proven that <r>the attacker</r> will always <bl>win an infinite number of times</bl>,
+and that the number of attacker and defender wins are <y>equal in number</y>.
+
+Does this mean that it will always be <r>illogical</r> to play the <bl>defender</bl>?
+In the next post, we'll discuss the <y>motivations</y> behind playing both sides.
